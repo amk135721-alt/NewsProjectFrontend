@@ -24,7 +24,7 @@ const UserRegister = () => {
     setSuccessMsg("");
 
     try {
-      const res = await axios.post("http://localhost:5001/api/create-user", data);
+      const res = await axios.post("https://newsbackend-3-q0cj.onrender.com/api/create-user", data);
       console.log("Success response:", res.data);
 
       if (res.data.success) {

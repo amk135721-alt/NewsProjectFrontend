@@ -185,7 +185,7 @@ const NewsPage = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:5001/api/getbyuserid`,
+        `https://newsbackend-3-q0cj.onrender.com/api/getbyuserid`,
         {},
         {
           headers: {
@@ -209,7 +209,7 @@ const NewsPage = () => {
 
   // Fetch Highlights
   useEffect(() => {
-    axios.get("http://localhost:5001/api/highlights")
+    axios.get("https://newsbackend-3-q0cj.onrender.com/api/highlights")
       .then((res) => {
         const newsArray2 = Array.isArray(res.data)
           ? res.data
@@ -223,7 +223,7 @@ const NewsPage = () => {
 
 
   useEffect(() => {
-    axios.get("http://localhost:5001/api/onehighlight")
+    axios.get("https://newsbackend-3-q0cj.onrender.com/api/onehighlight")
       .then((res) => {
         const newsArray3 = Array.isArray(res.data)
           ? res.data
@@ -243,7 +243,7 @@ const NewsPage = () => {
   // Fetch Main News
   useEffect(() => {
     setLoading(true);
-    axios.get("http://localhost:5001/api/getallnews", {
+    axios.get("https://newsbackend-3-q0cj.onrender.com/api/getallnews", {
       params: {
         page: count,
         limit: limit,

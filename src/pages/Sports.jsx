@@ -6,7 +6,7 @@ const Sports = () => {
   const [data, setdata] = useState([])
 
   useEffect(() => {
-    axios.get("http://localhost:5001/api/getbytype/Sports")
+    axios.get("https://newsbackend-3-q0cj.onrender.com/api/getbytype/Sports")
       .then((res) => {
         const newsArray = Array.isArray(res.data)
           ? res.data

@@ -20,7 +20,7 @@ const UserLogin = () => {
     setErrorMsg('');
 
     try {
-      const res = await axios.post('http://localhost:5001/api/userlogin', data);
+      const res = await axios.post('https://newsbackend-3-q0cj.onrender.com/api/userlogin', data);
       if (res.data.status === 'blocked') {
         navigate('/');
         return;

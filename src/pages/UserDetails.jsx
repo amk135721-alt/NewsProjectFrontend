@@ -28,7 +28,7 @@ const UserDetails = () => {
     setLoading(true);
     setError(null);
 
-    axios.get(`http://localhost:5001/api/getalluser?page=${page}`)
+    axios.get(`https://newsbackend-3-q0cj.onrender.com/api/getalluser?page=${page}`)
       .then((res) => {
         const responseData = res.data;
 
@@ -75,7 +75,7 @@ const UserDetails = () => {
     setActionLoading((prev) => ({ ...prev, [userId]: true }));
 
     try {
-      const response = await axios.put(`http://localhost:5001/api/block/${userId}`);
+      const response = await axios.put(`https://newsbackend-3-q0cj.onrender.com/api/block/${userId}`);
       const updatedUser = response.data?.user;
 
       setUsers((prevUsers) =>

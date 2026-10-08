@@ -6,7 +6,7 @@ const Social = () => {
   const [data, setdata] = useState([])
 
   useEffect(() => {
-    axios.get("http://localhost:5001/api/getbytype/Social")
+    axios.get("https://newsbackend-3-q0cj.onrender.com/api/getbytype/Social")
       .then((res) => {
         const newsArray = Array.isArray(res.data)
           ? res.data

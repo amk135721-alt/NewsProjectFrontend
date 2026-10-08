@@ -39,7 +39,7 @@ const ManageNews = () => {
 
   const fetchNews = () => {
     setLoading(true);
-    axios.get("http://localhost:5001/api/getallnews")
+    axios.get("https://newsbackend-3-q0cj.onrender.com/api/getallnews")
       .then((res) => {
         const newsArray = Array.isArray(res.data)
           ? res.data
@@ -108,7 +108,7 @@ const ManageNews = () => {
         payload.append("pic", selectedFile);
       }
 
-      const res = await axios.put("http://localhost:5001/api/edit", payload, {
+      const res = await axios.put("https://newsbackend-3-q0cj.onrender.com/api/edit", payload, {
         headers: { "Content-Type": "multipart/form-data" }
       });
 
@@ -132,7 +132,7 @@ const ManageNews = () => {
     if (!window.confirm("Are you sure you want to delete this news article?")) return;
 
     try {
-      await axios.delete(`http://localhost:5001/api/deletenews/${id}`);
+      await axios.delete(`https://newsbackend-3-q0cj.onrender.com/api/deletenews/${id}`);
 
       setNewsList((prevData) => {
         const updatedList = prevData.filter((item) => item._id !== id);
@@ -153,7 +153,7 @@ const ManageNews = () => {
     if (!window.confirm("Are you sure you want to delete ALL news articles? This action cannot be undone.")) return;
 
     try {
-      await axios.delete("http://localhost:5001/api/deleteallnews");
+      await axios.delete("https://newsbackend-3-q0cj.onrender.com/api/deleteallnews");
       setNewsList([]);
       setCurrentPage(1);
       alert("All news articles deleted successfully.");

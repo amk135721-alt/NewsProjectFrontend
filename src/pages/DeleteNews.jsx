@@ -21,7 +21,7 @@ const DeleteNews = () => {
 
   // Fetch all news articles from the backend
   useEffect(() => {
-    axios.get("http://localhost:5001/api/getallnews")
+    axios.get("https://newsbackend-3-q0cj.onrender.com/api/getallnews")
       .then((res) => {
         const newsArray = Array.isArray(res.data)
           ? res.data
@@ -50,7 +50,7 @@ const DeleteNews = () => {
     if (!window.confirm("Are you sure you want to delete this news article?")) return;
 
     try {
-      await axios.delete(`http://localhost:5001/api/deletenews/${id}`);
+      await axios.delete(`https://newsbackend-3-q0cj.onrender.com/api/deletenews/${id}`);
 
       // Instantly remove from state without requiring page reload
       setNewsList((prevData) => {
@@ -73,7 +73,7 @@ const DeleteNews = () => {
     if (!window.confirm("Are you sure you want to delete ALL news articles? This action cannot be undone.")) return;
 
     try {
-      await axios.delete("http://localhost:5001/api/deleteallnews");
+      await axios.delete("https://newsbackend-3-q0cj.onrender.com/api/deleteallnews");
       setNewsList([]); // Instantly clear local state
       setCurrentPage(1);
       alert("All news articles deleted successfully.");

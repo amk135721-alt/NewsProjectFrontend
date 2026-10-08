@@ -52,7 +52,7 @@ const Highlights = () => {
         allformData.append("location", formData.location);
 
         try {
-            const res = await axios.post('http://localhost:5001/api/create-highlight', allformData);
+            const res = await axios.post('https://newsbackend-3-q0cj.onrender.com/api/create-highlight', allformData);
 
             if (res.data.success) {
                 setStatusMsg({ type: 'success', text: res.data.message || 'Highlight published successfully!' });
