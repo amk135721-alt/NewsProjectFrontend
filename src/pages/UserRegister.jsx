@@ -7,7 +7,7 @@ const UserRegister = () => {
   const [data, setdata] = useState({
     name: "",
     email: "",
-    password: "",
+    currentpassword: "",
   })
   
   const [errorMsgs, setErrorMsgs] = useState([])
@@ -198,9 +198,9 @@ const UserRegister = () => {
               </label>
               <input
                 type="password"
-                name="password"
+                name="currentpassword"
                 onChange={handleChange}
-                value={data.password}
+                value={data.currentpassword}
                 placeholder="Enter your password"
                 className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
               />
