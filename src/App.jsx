@@ -24,7 +24,7 @@ import Highlights from './pages/Highlights'
 import DeleteHighlight from './pages/DeleteHighlight'
 import DeleteNews from './pages/DeleteNews'
 import EditNews from './pages/EditNews'
-import LandingPage from './pages/landingpage'
+import LandingPage from './pages/LandingPage'
 function App() {
   const [count, setCount] = useState(0)
 
