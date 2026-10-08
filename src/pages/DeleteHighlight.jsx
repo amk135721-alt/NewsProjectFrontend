@@ -17,7 +17,7 @@ const DeleteHighlight = () => {
 
   // Fetch Highlights (data2)
   useEffect(() => {
-    axios.get("https://newsbackend-3-q0cj.onrender.com/api/highlights")
+    axios.get("https://newsprojectbackend.onrender.com/api/highlights")
       .then((res) => {
         const newsArray2 = Array.isArray(res.data)
           ? res.data
@@ -37,7 +37,7 @@ const DeleteHighlight = () => {
     if (!window.confirm("Are you sure you want to delete this highlight?")) return;
 
     try {
-      await axios.delete(`https://newsbackend-3-q0cj.onrender.com/api/deletehighlight/${id}`);
+      await axios.delete(`https://newsprojectbackend.onrender.com/api/deletehighlight/${id}`);
 
       // Remove deleted item from local state so UI updates without reload
       setdata2((prevData) => prevData.filter((item) => item._id !== id));
@@ -52,7 +52,7 @@ const DeleteHighlight = () => {
     if (!window.confirm("Are you sure you want to delete ALL highlights? This action cannot be undone.")) return;
 
     try {
-      await axios.delete("https://newsbackend-3-q0cj.onrender.com/api/deleteallhighlight");
+      await axios.delete("https://newsprojectbackend.onrender.com/api/deleteallhighlight");
       setdata2([]); // Clear state immediately
       alert("All highlights deleted successfully.");
     } catch (error) {

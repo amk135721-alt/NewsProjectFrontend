@@ -24,7 +24,7 @@ const AdminLogin = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post('https://newsbackend-3-q0cj.onrender.com/api/adminlogin', formData);
+      const res = await axios.post('https://newsprojectbackend.onrender.com/api/adminlogin', formData);
 
       // Verify explicit success flag from backend
       if (res.data && res.data.success) {

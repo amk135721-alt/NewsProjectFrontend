@@ -6,7 +6,7 @@ const Technology = () => {
   const [data, setdata] = useState([])
 
   useEffect(() => {
-    axios.get("https://newsbackend-3-q0cj.onrender.com/api/getbytype/Technology")
+    axios.get("https://newsprojectbackend.onrender.com/api/getbytype/Technology")
       .then((res) => {
         const newsArray = Array.isArray(res.data) 
           ? res.data 

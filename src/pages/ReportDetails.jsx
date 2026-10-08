@@ -9,7 +9,7 @@ const UserDetails = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    axios.get("https://newsbackend-3-q0cj.onrender.com/api/viewreport")
+    axios.get("https://newsprojectbackend.onrender.com/api/viewreport")
       .then((res) => {
         const reportData = Array.isArray(res.data)
           ? res.data

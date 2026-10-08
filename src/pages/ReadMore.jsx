@@ -39,7 +39,7 @@ const ReadMore = () => {
 
     try {
       const res = await axios.post(
-        'https://newsbackend-3-q0cj.onrender.com/api/create-comment',
+        'https://newsprojectbackend.onrender.com/api/create-comment',
         {
           comments: commentText,
           postid: id,
@@ -76,7 +76,7 @@ const ReadMore = () => {
     if (!id) return;
     setLoadingComments(true);
     try {
-      const res = await axios.get(`https://newsbackend-3-q0cj.onrender.com/api/viewcomment/${id}`);
+      const res = await axios.get(`https://newsprojectbackend.onrender.com/api/viewcomment/${id}`);
 
       const rawData = res.data.data || res.data || [];
       // Ensure comments is always an array
@@ -105,7 +105,7 @@ const ReadMore = () => {
       return;
     }
 
-    axios.get(`https://newsbackend-3-q0cj.onrender.com/api/readmore/${id}`)
+    axios.get(`https://newsprojectbackend.onrender.com/api/readmore/${id}`)
       .then((res) => {
         const item = res.data.data || res.data;
         setNewsItem(item);

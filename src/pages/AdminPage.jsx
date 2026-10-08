@@ -54,7 +54,7 @@ const AdminPage = () => {
         allformData.append("location", formData.location);
 
         try {
-            const res = await axios.post('https://newsbackend-3-q0cj.onrender.com/api/create-news', allformData);
+            const res = await axios.post('https://newsprojectbackend.onrender.com/api/create-news', allformData);
 
             if (res.data.success) {
                 setStatusMsg({ type: 'success', text: res.data.message || 'News published successfully!' });

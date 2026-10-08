@@ -31,7 +31,7 @@ const Report = () => {
       }
 
       const response = await axios.post(
-        'https://newsbackend-3-q0cj.onrender.com/api/report',
+        'https://newsprojectbackend.onrender.com/api/report',
         { report: reportText,id:id },
         {
           headers: {

@@ -18,7 +18,7 @@ const FindByLocation = () => {
       return;
     }
 
-    axios.get(`https://newsbackend-3-q0cj.onrender.com/api/getbylocation/${selectedLocation}`)
+    axios.get(`https://newsprojectbackend.onrender.com/api/getbylocation/${selectedLocation}`)
       .then((res) => {
         const newsArray = Array.isArray(res.data)
           ? res.data
